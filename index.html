@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniCursos - Tela de Início</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js"></script>
+
+</head>
+<body>
+  <header>
+    <button id="homeButton">UniCursos</button>
+    <nav>
+      <img src="https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur.png" alt="Ícone de usuário" id="userIcon">
+
+      <a href="#addCourseForm">Cadastro de Cursos</a>
+      <a href="#courseList">Lista de Cursos</a>
+      <a href="#footer">Rodapé</a>
+      <button id="lightTheme">Tema claro</button>
+      <button id="darkTheme" class="darkButton">Tema escuro</button>
+    </nav>
+  </header>
+
+  <main>
+    <form onsubmit="addCourse()" class="container" id="addCourseForm">
+      <section class="darkRedSection">
+        <section class="brightRedSection">
+          <label for="CourseName">Nome do curso:</label>
+          <input type="text" id="CourseName" required><br>
+
+          <label for="CourseTime">Carga horária (em horas):</label>
+          <input type="number" id="CourseTime" required><br>
+
+          <label for="CourseInstructor">Nome do instrutor:</label>
+          <input type="text" id="CourseInstructor" required><br>
+        </section>
+
+        <section id="CourseTeaching" class="brightRedSection">
+          <p>Nível de educação do curso:</p>
+          <input type="radio" id="Tecnologo" name="education" required>Tecnólogo<br>
+          <input type="radio" id="Profissionalizante" name="education" required>Profissionalizante<br>
+          <input type="radio" id="EnsinoSuperior" name="education" required>Ensino superior<br>
+        </section>
+
+        <button type="submit">Adicionar</button>
+      </section>
+    </form>
+
+    <section id="courseList" class="brightRedSection">
+      <p>Cursos:</p>
+      <table id="courseTable" class="courseTable">
+        <thead>
+          <tr>
+            <th>Curso</th>
+            <th>Carga horária (horas)</th>
+            <th>Instrutor</th>
+            <th>Nível de educação</th>
+            <th>Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <p>Jaqueline Klegin, Matheus Eduardo dos Santos, João Vinícius Rosá</p>
+  </footer>
+</body>
+</html>

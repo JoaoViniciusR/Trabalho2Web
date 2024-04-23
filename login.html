@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Login Screen</title>
+	<link rel="stylesheet" type="text/css" href="styleLogin.css">
+</head>
+
+<body>
+	<div class="home">
+		<form class="form_container">
+			<h1>Login</h1>
+			<div class="input_box">
+				<input type="text" placeholder="Escreva o seu email" id="email" required />
+				<i class="uil uil-envelope-alt email"></i>
+			</div>
+			<div class="input_box">
+				<input type="password" placeholder="Escreva a sua senha" id="password" required />
+				<i class="uil uil-lock-alt password"></i>
+			</div>
+			<button type="submit" onclick="validateLogin()">Login</button>
+
+		</form>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
