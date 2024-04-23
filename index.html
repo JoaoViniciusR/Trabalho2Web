@@ -7,6 +7,13 @@
   <link rel="stylesheet" href="style.css">
   <script src="index.js"></script>
 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Material Design Components Web -->
+  <link rel="stylesheet" href="https://unpkg.com/@material/web/dist/material-web.min.css">
+  <script src="https://unpkg.com/@material/web/dist/material-web.min.js"></script>
+
+
 </head>
 <body>
   <header>
@@ -23,30 +30,62 @@
   </header>
 
   <main>
-    <form onsubmit="addCourse()" class="container" id="addCourseForm">
-      <section class="darkRedSection">
-        <section class="brightRedSection">
-          <label for="CourseName">Nome do curso:</label>
-          <input type="text" id="CourseName" required><br>
-
-          <label for="CourseTime">Carga horária (em horas):</label>
-          <input type="number" id="CourseTime" required><br>
-
-          <label for="CourseInstructor">Nome do instrutor:</label>
-          <input type="text" id="CourseInstructor" required><br>
-        </section>
-
-        <section id="CourseTeaching" class="brightRedSection">
-          <p>Nível de educação do curso:</p>
-          <input type="radio" id="Tecnologo" name="education" required>Tecnólogo<br>
-          <input type="radio" id="Profissionalizante" name="education" required>Profissionalizante<br>
-          <input type="radio" id="EnsinoSuperior" name="education" required>Ensino superior<br>
-        </section>
-
-        <button type="submit">Adicionar</button>
-      </section>
-    </form>
-
+    <form id="myForm">
+        <div class="mdc-text-field">
+          <input type="text" id="textField1" class="mdc-text-field__input" required>
+          <label class="mdc-floating-label" for="textField1">Text Field 1</label>
+          <div class="mdc-line-ripple"></div>
+        </div>
+      
+        <div class="mdc-select">
+          <select class="mdc-select__native-control" id="comboBox1" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+          </select>
+          <div class="mdc-select__selected-text"></div>
+          <div class="mdc-select__dropdown-container">
+            <i class="mdc-select__dropdown-icon"></i>
+            <div class="mdc-select__menu mdc-menu mdc-menu-surface" tabindex="-1">
+              <ul class="mdc-list" role="listbox">
+                <li class="mdc-list-item"role="option">Option 1</li>
+                <li class="mdc-list-item" role="option">Option 2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+        <div class="mdc-checkbox">
+          <input type="checkbox" id="check1" class="mdc-checkbox__native-control" required>
+          <div class="mdc-checkbox__background">
+            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+              <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+            </svg>
+            <div class="mdc-checkbox__mixedmark"></div>
+          </div>
+          <div class="mdc-checkbox__ripple"></div>
+        </div>
+      
+        <div class="mdc-text-field">
+          <input type="text" id="textField2" class="mdc-text-field__input" required>
+          <label class="mdc-floating-label" for="textField2">Text Field 2</label>
+          <div class="mdc-line-ripple"></div>
+        </div>
+      
+        <div class="mdc-text-field">
+          <input type="text" id="textField3" class="mdc-text-field__input" required>
+          <label class="mdc-floating-label" for="textField3">Text Field 3</label>
+          <div class="mdc-line-ripple"></div>
+        </div>
+      
+        <button type="submit" class="mdc-button mdc-button--raised" id="saveButton">
+          <span class="mdc-button__label">Save</span>
+        </button>
+      
+        <button type="button" class="mdc-button mdc-button--raised" id="clearButton">
+          <span class="mdc-button__label">Clear</span>
+        </button>
+      </form>
     <section id="courseList" class="brightRedSection">
       <p>Cursos:</p>
       <table id="courseTable" class="courseTable">
